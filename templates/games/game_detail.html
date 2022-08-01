@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>Details about - {{game.title}}</p>
+  <p>Developer: {{game.developer}}<p>
+  <p>Description: {{game.description}}</p>
+
+  <a href="{% url 'game_list' %}">Return to App Home Page</a>
+      <br>
+  <a href="{% url 'game_update' game.pk%}"> Update Game</a>
+      <br>
+  <a href="{% url 'game_delete' game.pk %}"> Delete Game</a>
+      <br>
+{% endblock content %}

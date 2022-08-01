@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     "pages",
+    "games"
 ]
 
 # MIDDLEWARE
@@ -60,7 +61,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["templates"],
+        "DIRS": ['templates', BASE_DIR / 'templates/games'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -126,7 +127,6 @@ USE_I18N = True
 USE_L10N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
-
 
 # STATIC
 # ------------------------------------------------------------------------------
